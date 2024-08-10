@@ -60,6 +60,7 @@ import initMenuMobile from './modules/mobile-menu.js';
 import initDatas from './modules/datas.js';
 import initFetchAnimais from './modules/fetch-animais.js';
 import initFetchBitcoin from './modules/fetch-bitcoin.js';
+import {Slide, SlideNav} from "./modules/slide.js";
 
 initModal();
 initTooltip();
@@ -68,3 +69,7 @@ initMenuMobile();
 initDatas();
 initFetchAnimais();
 initFetchBitcoin();
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+slide.addControl('.custom-control');
