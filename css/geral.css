@@ -212,12 +212,19 @@ body {
 }
 
 .js-faq dt::after {
-    content: '▼';
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: url('../img/arrow-red.svg') no-repeat center center;
     margin-left: 10px;
+    transform: rotate(90deg);
+    transition: transform .3s;
 }
 
 .js-faq dt.ativo::after {
-    content: '▲';
+    content: '';
+    transform: rotate(-90deg);
 }
 
 .js-faq dd.ativo {
@@ -257,6 +264,13 @@ body {
     border: 2px solid #000;
 }
 
+.arrow-black {
+    background: url('../img/arrow-black.svg') center center no-repeat;
+    display: inline-block;
+    width: 8px;
+    height: 10px;
+}
+
 @keyframes show {
     from {
         opacity: 0;
@@ -294,7 +308,7 @@ body {
         gap: 10px;
     }
     .grid-section h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .animais-lista{
         grid-column: 1;
